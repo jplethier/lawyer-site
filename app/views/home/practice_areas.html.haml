@@ -1,1 +1,42 @@
-Áreas de Atuação
+.practice_areas
+  %h1= t('strings.practice_areas')
+  .text
+    %p.first
+      I'm a Paragraph. Click here to add your own text and edit me.
+      %br
+      It’s easy. Just click “Edit Text” or double click me and you can start
+      %br
+      adding your own content and make changes to the font.
+
+  %ul
+    %li.odd
+      %h3= t('strings.law_areas.employment_law')
+      %p I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+      %p I’m a great place for you to let your users know a little more about you. If you want to delete me just click on me and press delete.
+
+    %li.even
+      %h3= t('strings.law_areas.family_law')
+      %p I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+      %p I’m a great place for you to let your users know a little more about you. If you want to delete me just click on me and press delete.
+
+    %li.odd
+      %h3= t('strings.law_areas.criminal_law')
+      %p I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+      %p I’m a great place for you to let your users know a little more about you. If you want to delete me just click on me and press delete.
+
+    %li.even
+      %h3= t('strings.law_areas.consumer_law')
+      %p I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+      %p I’m a great place for you to let your users know a little more about you. If you want to delete me just click on me and press delete.
+
+    %li.odd
+      %h3= t('strings.law_areas.civil_law')
+      %p I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+      %p I’m a great place for you to let your users know a little more about you. If you want to delete me just click on me and press delete.
+
+    %li.even
+      %h3= t('strings.law_areas.tax_law')
+      %p I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+      %p I’m a great place for you to let your users know a little more about you. If you want to delete me just click on me and press delete.
+
+  = link_to t('strings.schedule_consultation'), contact_path, class: 'btn-black'

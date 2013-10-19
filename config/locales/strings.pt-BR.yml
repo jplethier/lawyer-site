@@ -4,5 +4,13 @@
     contact: 'Contato'
     follow: 'Seguir:'
     home: 'Página Inicial'
+    law_areas:
+      civil_law: 'Direito Civil'
+      consumer_law: 'Direito do Consumidor'
+      criminal_law: 'Direito Criminal'
+      employment_law: 'Direito do Trabalho'
+      family_law: 'Direito da Família'
+      tax_law: 'Direito Tributário'
     lawyer: "Advogada"
     practice_areas: 'Áreas de Atuação'
+    schedule_consultation: 'Marque uma consulta'

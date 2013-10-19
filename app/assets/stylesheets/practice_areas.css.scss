@@ -1,0 +1,38 @@
+.practice_areas {
+  ul {
+    li {
+      float: left;
+      margin: 20px;
+      width: 300px;
+
+      h3 {
+        border-top: 5px solid;
+        font-size: 26px;
+        margin: 0 0 10px;
+        padding: 10px 0;
+      }
+
+      p {
+
+      }
+    }
+
+    li.odd {
+      h3 {
+        border-color: $orange;
+        color: $orange;
+      }
+    }
+
+    li.even {
+      h3 {
+        border-color: $black;
+        color: $black;
+      }
+    }
+  }
+
+  a {
+    float: right;
+  }
+}
