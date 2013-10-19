@@ -23,11 +23,7 @@ article {
   }
 
   .btn-black {
-    /*@include linear-gradient(, $gray-dark);*/
-    @include button(shiny, $gray-dark);
-    border-radius: 5px;
-    color: $white;
-    display: block;
+    @include button(shiny, $black);
     text-transform: uppercase;
     padding: 10px 20px;
   }
