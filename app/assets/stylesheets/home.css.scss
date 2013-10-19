@@ -1,10 +1,46 @@
 .home {
   .banner {
-    max-height: 300px;
+    margin-bottom: 10px;
+    max-height: 315px;
     width: 1024px;
 
     img {
       width: 1024px;
+    }
+  }
+
+  .news {
+    float: left;
+    width: 100%;
+
+    h3 {
+      border-top: 5px solid;
+      color: $black;
+      font-size: 26px;
+      margin: 0 0 10px;
+      padding: 10px 0;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        margin: 5px 0;
+
+        a {
+          color: $black;
+          font-size: 14px;
+
+          span {
+            color: $orange;
+            font-size: 12px;
+          }
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

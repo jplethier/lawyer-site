@@ -3,4 +3,17 @@ class Report < ActiveRecord::Base
 
   validates :title, presence: true
   validates :url,   presence: true, format: /\Ahttps?:\/\/.+\z/
+
+  def self.fetch_news(qty)
+    news = []
+    feed = Feedzirra::Feed.fetch_and_parse(TST_FEED)
+    feed.entries.each do |entry|
+      report = Report.new
+      report.title = entry.title
+      report.url = entry.url
+      news << report if report.valid?
+    end
+    news = news[0..9] if news.size > 10
+    news
+  end
 end

@@ -57,6 +57,9 @@ end
 # Use unicorn as the app server
 gem 'unicorn'
 
+# Fetch feed
+gem 'feedzirra'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
@@ -86,4 +89,3 @@ group :test do
   gem 'simplecov', :require => false
   gem 'site_prism'
 end
-
