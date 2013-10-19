@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-LawyerSite::Application.config.secret_key_base = '805b29bf9d353a3a697b4925b40383716f3056719c0f090f1c9502cbea76d7cd4b32b60c4431ba232fd140cd5701f543aab4dc89084cbd577351a8870af2464a'
+LawyerSite::Application.config.secret_key_base = 'cfe28a1a8861ee3587a790e343c7240046f5b824084989d568eb4b5287593a42186f70a78456dbae756b2d4014445e1aa11cfe46a24005e33c00a9990190d705'
