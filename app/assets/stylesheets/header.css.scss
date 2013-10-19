@@ -1,0 +1,60 @@
+.nav {
+  background: $gray-dark;
+  height: 92px;
+  width: 100%;
+
+  .nav-wrapper {
+    margin: 0 auto;
+    width: 1024px;
+
+    .left-content {
+      display: inline-block;
+    }
+
+    h1, span {
+      color: white;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      color: $white;
+      float: left;
+      font-family: sans-serif;
+      font-size: 32px;
+      margin-bottom: 0;
+
+      b {
+        color: $orange;
+      }
+    }
+
+    span {
+      clear: left;
+      display: block;
+      float: right;
+      font-size: 14px;
+    }
+
+    ul.menu {
+      display: inline-block;
+      float: right;
+      margin: 37px 0;
+
+      li {
+        float: left;
+        padding: 0 10px;
+        width: auto;
+
+        a {
+          color: $white;
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+
+        a.active {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
