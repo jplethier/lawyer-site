@@ -54,6 +54,15 @@
     .main_popup
 
   %footer
+    .footer-wrapper
+      %p
+        © 2013 Bruna Ribeiro Xavier
+      .follow
+        %p= t('strings.follow')
+        %a{ href: '', title: 'Facebook', target: '_blank' }
+          %img{ src: asset_path('fb-icon.png'), alt: 'Facebook' }
+        %a{ href: '', title: 'Twitter', target: '_blank' }
+          %img{ src: asset_path('tw-icon.png'), alt: 'Twitter' }
 
   = javascript_include_tag :application
   = yield :javascript
