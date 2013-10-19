@@ -38,13 +38,13 @@
           %span= t('strings.lawyer')
       %ul.menu
         %li
-          = link_to t('strings.home'), '', class: action_name == 'index' ? 'active' : ''
+          = link_to t('strings.home'), '/', class: action_name == 'index' ? 'active' : ''
         %li
-          = link_to t('strings.practice_areas'), '', class: action_name == 'practice_areas' ? 'active' : ''
+          = link_to t('strings.practice_areas'), practice_areas_path, class: action_name == 'practice_areas' ? 'active' : ''
         %li
-          = link_to t('strings.about'), '', class: action_name == 'about' ? 'active' : ''
+          = link_to t('strings.about'), about_path, class: action_name == 'about' ? 'active' : ''
         %li
-          = link_to t('strings.contact'), '', class: action_name == 'contact' ? 'active' : ''
+          = link_to t('strings.contact'), contact_path, class: action_name == 'contact' ? 'active' : ''
 
   %article
     = yield
