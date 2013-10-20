@@ -74,7 +74,7 @@ LawyerSite::Application.configure do
     :authentication => :plain,
     :domain => 'brunaxavier.com', #ENV['GMAIL_SMTP_USER'],
     :user_name => 'brunarxavier@gmail.com', #ENV['GMAIL_SMTP_USER'],
-    :password => '485784672', #ENV['GMAIL_SMTP_PASSWORD'],
+    :password => '36076481', #ENV['GMAIL_SMTP_PASSWORD'],
     :enable_starttls_auto => true
   }
 
