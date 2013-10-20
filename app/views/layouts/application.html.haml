@@ -35,7 +35,7 @@
             Bruna
             %b Xavier
           %span= t('strings.lawyer')
-          %span{ style: 'clear: right;' } 999.999.9-9
+          %span{ style: 'clear: right;' } OAB/RJ 183.966
       %ul.menu
         %li
           = link_to t('strings.home'), '/', class: action_name == 'index' ? 'active' : ''
@@ -61,10 +61,10 @@
         © 2013 Bruna Ribeiro Xavier
       .follow
         %p= t('strings.follow')
-        %a{ href: '', title: 'Facebook', target: '_blank' }
+        %a{ href: 'https://www.facebook.com/brunarxavieradvocacia', title: 'Facebook', target: '_blank' }
           %img{ src: asset_path('fb-icon.png'), alt: 'Facebook' }
-        %a{ href: '', title: 'Twitter', target: '_blank' }
-          %img{ src: asset_path('tw-icon.png'), alt: 'Twitter' }
+        / %a{ href: '', title: 'Twitter', target: '_blank' }
+        /   %img{ src: asset_path('tw-icon.png'), alt: 'Twitter' }
 
   = javascript_include_tag :application
   = yield :javascript
