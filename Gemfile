@@ -11,6 +11,9 @@ gem 'activerecord-postgresql-adapter'
 # better activerecord queries
 gem 'squeel'
 
+# server
+gem 'rails_12factor', group: :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bourbon'
