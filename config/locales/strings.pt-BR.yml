@@ -12,6 +12,8 @@
       family_law: 'Direito da Família'
       tax_law: 'Direito Tributário'
     lawyer: "Advogada"
+    mail_contact: 'Enviar uma mensagem de email'
     news: 'Notícias'
+    phone: 'Telefone'
     practice_areas: 'Áreas de Atuação'
     schedule_consultation: 'Marque uma consulta'

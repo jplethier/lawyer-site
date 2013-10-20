@@ -1,0 +1,22 @@
+form {
+  .field {
+    margin: 5px 0;
+  }
+
+  input[type='text'], input[type='email'], textarea {
+    background: $gray-lighter;
+    border: none;
+    color: $black;
+    font-family: Tahoma;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  label.error {
+    color: $red;
+  }
+}

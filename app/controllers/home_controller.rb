@@ -14,4 +14,9 @@ class HomeController < ApplicationController
   def contact
 
   end
+
+  def send_contact_email
+    FaqMailer.contact_us(params[:name], params[:email], params[:subject], params[:message]).deliver
+    redirect_to contact_path, success: 'Mensagem enviada com sucesso. Entraremos em contato em breve.'
+  end
 end

@@ -1,6 +1,8 @@
 @import 'reset';
 @import 'bourbon';
 @import 'colors';
+@import 'form';
+@import 'flashes';
 
 @import 'header';
 @import 'footer';
@@ -8,3 +10,4 @@
 @import 'about';
 @import 'practice_areas';
 @import 'home';
+@import 'contact';
