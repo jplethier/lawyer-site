@@ -9,10 +9,7 @@
     }
   }
 
-  .news {
-    float: left;
-    width: 100%;
-
+  .news, .links, .partners {
     h3 {
       border-top: 5px solid;
       color: $black;
@@ -42,5 +39,19 @@
         }
       }
     }
+  }
+
+  .news {
+    float: left;
+    width: 73%;
+  }
+
+  .links, .partners {
+    float: right;
+    width: 25%;
+  }
+
+  .partners {
+    margin-top: 10px;
   }
 }

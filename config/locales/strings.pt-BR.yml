@@ -3,6 +3,7 @@
     about: 'Sobre'
     contact: 'Contato'
     follow: 'Seguir:'
+    helpful_links: 'Links Úteis'
     home: 'Página Inicial'
     law_areas:
       civil_law: 'Direito Civil'
@@ -13,7 +14,10 @@
       tax_law: 'Direito Tributário'
     lawyer: "Advogada"
     mail_contact: 'Enviar uma mensagem de email'
+    meeting: 'Atendimento'
     news: 'Notícias'
+    partners: 'Parceiros'
     phone: 'Telefone'
     practice_areas: 'Áreas de Atuação'
     schedule_consultation: 'Marque uma consulta'
+    see_map: 'Veja no mapa'
