@@ -7,13 +7,15 @@ class Report < ActiveRecord::Base
   def self.fetch_news(qty)
     news = []
     feed = Feedzirra::Feed.fetch_and_parse(TST_FEED)
-    feed.entries.each do |entry|
-      report = Report.new
-      report.title = entry.title
-      report.url = entry.url
-      news << report if report.valid?
+    unless feed == 200
+      feed.entries.each do |entry|
+        report = Report.new
+        report.title = entry.title
+        report.url = entry.url
+        news << report if report.valid?
+      end
+      news = news[0..9] if news.size > 10
     end
-    news = news[0..9] if news.size > 10
     news
   end
 end
