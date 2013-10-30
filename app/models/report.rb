@@ -6,7 +6,8 @@ class Report < ActiveRecord::Base
 
   def self.fetch_news(qty)
     news = []
-    feed = Feedzirra::Feed.fetch_and_parse(TST_FEED)
+    # feed = Feedzirra::Feed.fetch_and_parse(TST_FEED)
+    feed = 200
     unless feed == 200
       feed.entries.each do |entry|
         report = Report.new
