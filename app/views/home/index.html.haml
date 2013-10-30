@@ -2,12 +2,12 @@
   .banner
     %img{ src: asset_path('banner1.jpg'), alt: 'Advocacia' }
 
-  .news
-    %h3= t('strings.news')
-    %ul
-      - @reports.each do |report|
-        %li
-          = link_to (report.title + " <span>Leia mais...</span>").html_safe, report.url, target: '_blank'
+  / .news
+  /   %h3= t('strings.news')
+  /   %ul
+  /     - @reports.each do |report|
+  /       %li
+  /         = link_to (report.title + " <span>Leia mais...</span>").html_safe, report.url, target: '_blank'
 
   .links
     %h3= t('strings.helpful_links')
