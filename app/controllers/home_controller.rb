@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    # @reports = Report.fetch_news(5)
+    @reports = Report.fetch_news(5)
   end
 
   def practice_areas
