@@ -27,7 +27,7 @@ class Report < ActiveRecord::Base
 
   def self.update_direito_estado_noticias_feed
     @@d_est_news_feed = Feedzirra::Feed.fetch_and_parse(DIREITO_ESTADO_NOTICIAS_FEED)
-    unless @@d_est_news_feed == 200 || @@d_est_news_feed == 0
+    unless @@d_est_news_feed == 200 || @@d_est_news_feed == 0 || @@d_est_news_feed == 500
       @@d_est_news_feed.entries.each do |entry|
         unless Report.find_by(guid: "jornal-jurid-#{entry.title.truncate(100)}")
           report = Report.new
@@ -42,7 +42,7 @@ class Report < ActiveRecord::Base
   end
 
   def self.update_tst_feed
-    unless @@tst_feed == 200
+    unless @@tst_feed == 200 || @@tst_feed == 500
       @@tst_feed = Feedzirra::Feed.update(@@tst_feed)
       @@tst_feed.new_entries.each do |entry|
         unless Report.find_by(title: entry.title)
