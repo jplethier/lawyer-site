@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '5.2.1'
 
 # Database
-gem 'pg', '0.14.1', :require => 'pg'
+gem 'pg', require: 'pg'
 gem 'activerecord-postgresql-adapter'
 # better activerecord queries
 gem 'squeel'
@@ -15,17 +15,17 @@ gem 'squeel'
 gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'bourbon'
 
 # Page-specific javascript
 gem 'paloma'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -79,13 +79,13 @@ group :development, :test do
   gem 'awesome_print'
   gem 'factory_girl_rails'
   gem 'letter_opener'
-  gem 'pry-debugger'
+  gem 'pry'
   gem "rspec-rails"
 end
 
 group :test do
   gem 'capybara'
-  gem 'database_cleaner', '>= 1.0.1'
+  gem 'database_cleaner'
   gem 'launchy'
   gem 'poltergeist'
   gem 'selenium-webdriver'
