@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: lawyer_development
-  username: root
+  username: jplethier
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -12,7 +12,7 @@ test:
   adapter: postgresql
   encoding: utf8
   database: lawyer_test
-  username: root
+  username: jplethier
   password:
 
 production:
