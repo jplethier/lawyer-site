@@ -8,8 +8,6 @@ gem 'rails', '5.2.1'
 # Database
 gem 'pg', require: 'pg'
 gem 'activerecord-postgresql-adapter'
-# better activerecord queries
-gem 'squeel'
 
 # server
 gem 'rails_12factor', group: :production
@@ -61,7 +59,7 @@ end
 gem 'unicorn'
 
 # Fetch feed
-gem 'feedzirra'
+gem 'feedjira'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
