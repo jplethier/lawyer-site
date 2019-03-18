@@ -3,8 +3,8 @@ class Report < ActiveRecord::Base
   JORNAL_JURID_FEED = 'http://jornal.jurid.com.br/rss-feed'
   DIREITO_ESTADO_NOTICIAS_FEED = 'http://www.direitodoestado.com.br/rss/noticias.rss'
 
-  @@tst_feed = Feedzirra::Feed.fetch_and_parse(TST_FEED)
-  @@d_est_news_feed = Feedzirra::Feed.fetch_and_parse(DIREITO_ESTADO_NOTICIAS_FEED)
+  @@tst_feed = Feedjira::Feed.fetch_and_parse(TST_FEED)
+  @@d_est_news_feed = Feedjira::Feed.fetch_and_parse(DIREITO_ESTADO_NOTICIAS_FEED)
 
   validates :published_at, presence: true
   validates :title,        presence: true
@@ -14,7 +14,7 @@ class Report < ActiveRecord::Base
     self.published_at = Time.now if self.published_at.blank?
   end
 
-  scope :recent, order('published_at DESC')
+  scope :recent, -> { order('published_at DESC') }
 
   def self.fetch_news(qty)
     news = []
@@ -26,7 +26,7 @@ class Report < ActiveRecord::Base
   end
 
   def self.update_direito_estado_noticias_feed
-    @@d_est_news_feed = Feedzirra::Feed.fetch_and_parse(DIREITO_ESTADO_NOTICIAS_FEED)
+    @@d_est_news_feed = Feedjira::Feed.fetch_and_parse(DIREITO_ESTADO_NOTICIAS_FEED)
     unless @@d_est_news_feed == 200 || @@d_est_news_feed == 0 || @@d_est_news_feed == 500
       @@d_est_news_feed.entries.each do |entry|
         unless Report.find_by(guid: "jornal-jurid-#{entry.title.truncate(100)}")
@@ -43,7 +43,7 @@ class Report < ActiveRecord::Base
 
   def self.update_tst_feed
     unless @@tst_feed == 200 || @@tst_feed == 500
-      @@tst_feed = Feedzirra::Feed.update(@@tst_feed)
+      @@tst_feed = Feedjira::Feed.update(@@tst_feed)
       @@tst_feed.new_entries.each do |entry|
         unless Report.find_by(title: entry.title)
           report = Report.new
