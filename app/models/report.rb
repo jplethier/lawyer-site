@@ -6,6 +6,7 @@ class Report < ActiveRecord::Base
 
   @@tst_feed = Feedjira::Feed.fetch_and_parse(TST_FEED)
   @@d_est_news_feed = Feedjira::Feed.fetch_and_parse(DIREITO_ESTADO_NOTICIAS_FEED)
+  @@adfas_feed = Feedjira::Feed.fetch_and_parse(ADFAS_FEED)
   
   validates :published_at, presence: true
   validates :title,        presence: true
@@ -43,8 +44,8 @@ class Report < ActiveRecord::Base
   end
 
   def self.update_adfas_feed
-    unless adfas_feed == 200 || adfas_feed == 0 || adfas_feed == 500
-      adfas_feed.entries.each do |entry|
+    unless @@adfas_feed == 200 || @@adfas_feed == 0 || @@adfas_feed == 500
+      @@adfas_feed.entries.each do |entry|
         unless Report.find_by(guid: "jornal-jurid-#{entry.title.truncate(100)}")
           report = Report.new
           report.title = entry.title
@@ -70,11 +71,5 @@ class Report < ActiveRecord::Base
         end
       end
     end
-  end
-
-  private
-
-  def self.adfas_feed
-    @@adfas_feed ||= Feedjira::Feed.fetch_and_parse(ADFAS_FEED)
   end
 end
