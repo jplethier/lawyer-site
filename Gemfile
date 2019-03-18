@@ -14,7 +14,7 @@ gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
-gem 'bourbon'
+gem 'bourbon', '4.2.7'
 
 # Page-specific javascript
 gem 'paloma'

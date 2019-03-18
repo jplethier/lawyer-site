@@ -13,6 +13,10 @@
       display: inline-block;
     }
 
+    .right-content {
+      float: right;
+    }
+
     h1, span {
       color: white;
       font-family: sans-serif;
@@ -38,9 +42,16 @@
       font-size: 14px;
     }
 
+    a.whatsapp {
+      color: white;
+      margin: 32px 10px;
+      font-size: 24px;
+      float: left;
+    }
+
     ul.menu {
       display: inline-block;
-      float: right;
+      float: left;
       margin: 37px 0;
 
       li {
