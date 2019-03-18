@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,19 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131103132544) do
+ActiveRecord::Schema.define(version: 2013_11_03_132544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "reports", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.string   "brief"
+  create_table "reports", id: :serial, force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.string "brief"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "published_at"
-    t.string   "guid"
+    t.string "guid"
+    t.index ["guid"], name: "index_reports_on_guid"
   end
 
 end

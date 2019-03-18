@@ -1,4 +1,4 @@
-class AddGuidToReports < ActiveRecord::Migration
+class AddGuidToReports < ActiveRecord::Migration[5.2]
   def change
     add_column :reports, :guid, :string
 
