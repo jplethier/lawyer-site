@@ -4,7 +4,7 @@ article {
   width: 1024px;
 
   h1 {
-    color: $black;
+    color: $gray-dark;
     font-size: 32px;
     margin: 10px 0;
   }
@@ -15,7 +15,7 @@ article {
     }
 
     p {
-      color: $black;
+      color: $gray-dark;
       font-family: Tahoma;
       font-size: 12px;
       margin: 10px 0;
@@ -23,7 +23,7 @@ article {
   }
 
   .btn-black {
-    @include button(shiny, $black);
+    @include button(shiny, $gray-dark);
     text-transform: uppercase;
     padding: 10px 20px;
   }

@@ -46,12 +46,12 @@ class Report < ActiveRecord::Base
   def self.update_adfas_feed
     unless @@adfas_feed == 200 || @@adfas_feed == 0 || @@adfas_feed == 500
       @@adfas_feed.entries.each do |entry|
-        unless Report.find_by(guid: "jornal-jurid-#{entry.title.truncate(100)}")
+        unless Report.find_by(guid: "adfas-#{entry.title.truncate(100)}")
           report = Report.new
           report.title = entry.title
           report.url = entry.url
           report.published_at = entry.published
-          report.guid = "jornal-jurid-#{entry.title.truncate(100)}"
+          report.guid = "adfas-#{entry.title.truncate(100)}"
           report.save
         end
       end
@@ -60,7 +60,6 @@ class Report < ActiveRecord::Base
 
   def self.update_tst_feed
     unless @@tst_feed == 200 || @@tst_feed == 500
-      @@tst_feed = Feedjira::Feed.update(@@tst_feed)
       @@tst_feed.new_entries.each do |entry|
         unless Report.find_by(title: entry.title)
           report = Report.new

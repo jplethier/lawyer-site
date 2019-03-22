@@ -47,6 +47,8 @@
           / %li
           /   = link_to t('strings.about'), about_path, class: action_name == 'about' ? 'active' : ''
           %li
+            = link_to t('strings.social'), social_path, class: action_name == 'social' ? 'active' : ''
+          %li
             = link_to t('strings.contact'), contact_path, class: action_name == 'contact' ? 'active' : ''
         %a.whatsapp{ href: "https://api.whatsapp.com/send?phone=5521988450674", target: "_blank" }
           %i.fa.fa-whatsapp
