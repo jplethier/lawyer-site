@@ -46,12 +46,12 @@ class Report < ActiveRecord::Base
   def self.update_adfas_feed
     unless @@adfas_feed == 200 || @@adfas_feed == 0 || @@adfas_feed == 500
       @@adfas_feed.entries.each do |entry|
-        unless Report.find_by(guid: "adfas-#{entry.title.truncate(100)}")
+        unless Report.find_by(guid: "adfas-#{entry.entry_id}")
           report = Report.new
           report.title = entry.title
           report.url = entry.url
           report.published_at = entry.published
-          report.guid = "adfas-#{entry.title.truncate(100)}"
+          report.guid = "adfas-#{entry.entry_id}"
           report.save
         end
       end
