@@ -31,6 +31,8 @@ class Report < ActiveRecord::Base
   def self.update_direito_estado_noticias_feed
     unless @@d_est_news_feed == 200 || @@d_est_news_feed == 0 || @@d_est_news_feed == 500
       @@d_est_news_feed.entries.each do |entry|
+        next if entry.published.blank?
+
         unless Report.find_by(guid: "jornal-jurid-#{entry.title.truncate(100)}")
           report = Report.new
           report.title = entry.title
@@ -46,6 +48,8 @@ class Report < ActiveRecord::Base
   def self.update_adfas_feed
     unless @@adfas_feed == 200 || @@adfas_feed == 0 || @@adfas_feed == 500
       @@adfas_feed.entries.each do |entry|
+        next if entry.published.blank?
+
         unless Report.find_by(guid: "adfas-#{entry.entry_id}")
           report = Report.new
           report.title = entry.title
@@ -61,6 +65,8 @@ class Report < ActiveRecord::Base
   def self.update_tst_feed
     unless @@tst_feed == 200 || @@tst_feed == 500
       @@tst_feed.new_entries.each do |entry|
+        next if entry.published.blank?
+        
         unless Report.find_by(title: entry.title)
           report = Report.new
           report.title = entry.title
