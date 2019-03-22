@@ -1,0 +1,28 @@
+article {
+  .social {
+    .text {
+      float: left;
+      display: inline-block;
+      margin-right: 10px;
+      width: 550px;
+    }
+
+    .imgs {
+      float: right;
+      width: 300px;
+    }
+
+    .imgs .row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .imgs .row img {
+      max-width: 40%;
+      max-height: 100%;
+      margin: 10px;
+    }
+  }
+}
