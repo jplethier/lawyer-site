@@ -1,28 +1,44 @@
 article {
   .social {
-    .text {
-      float: left;
-      display: inline-block;
-      margin-right: 10px;
-      width: 550px;
-    }
 
-    .imgs {
-      float: right;
-      width: 300px;
-    }
-
-    .imgs .row {
-      width: 100%;
+    .social-content {
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      flex-direction: column;
 
-    .imgs .row img {
-      max-width: 40%;
-      max-height: 100%;
-      margin: 10px;
+      @media (min-width: $mobile-breakpoint) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .text {
+        display: inline-block;
+        width: 100%;
+
+        @media (min-width: $mobile-breakpoint) {
+          width: 64%;
+        }
+      }
+
+      .imgs {
+        width: 100%;
+
+        @media (min-width: $mobile-breakpoint) {
+          width: 32%;
+        }
+      }
+
+      .imgs .row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .imgs .row img {
+        max-width: 40%;
+        max-height: 100%;
+        margin: 10px;
+      }
     }
   }
 }
