@@ -14,8 +14,17 @@ article {
 
   h1 {
     color: $gray-dark;
-    font-size: 32px;
-    margin: 10px 0;
+    font-size: 26px;
+    margin: 5px 0;
+
+    @media (min-width: $mobile-breakpoint) {
+      font-style: 28px
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 32px;
+      margin: 10px 0;
+    }
   }
 
   .about, .practice_areas {
