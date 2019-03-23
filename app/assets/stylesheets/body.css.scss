@@ -27,6 +27,20 @@ article {
     }
   }
 
+  h3 {
+    border-top: 5px solid;
+    color: $gray-dark;
+    font-size: 18px;
+    margin: 0 0 5px;
+    padding: 10px 0 5px;
+
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 26px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
   .about, .practice_areas {
     p.first {
       font-size: 18px;

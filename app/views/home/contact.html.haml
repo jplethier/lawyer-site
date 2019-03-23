@@ -1,25 +1,27 @@
 %section.contact
   %h1= t('strings.contact')
-  .mail
-    %h3= t('strings.mail_contact')
+  .contact-content
+    .mail
+      %h3= t('strings.mail_contact')
 
-    = form_tag(send_contact_email_path, id: 'form_contact') do
-      .field= text_field_tag :name, '', placeholder: 'nome', required: true, data: { 'msg-required' => 'Informe seu nome' }
-      .field= email_field_tag :email, '', placeholder: 'e-mail', required: true, data: { 'msg-required' => 'Informe seu email' }
-      .field= text_field_tag :subject, '', placeholder: 'assunto', required: true, data: { 'msg-required' => 'Informe o assunto do seu contato' }
-      .field= text_area_tag :message, '', placeholder: 'mensagem', required: true, data: { 'msg-required' => 'Explique o motivo do seu contato' }, maxlength: 355
+      = form_tag(send_contact_email_path, id: 'form_contact') do
+        .field= text_field_tag :name, '', placeholder: 'nome', required: true, data: { 'msg-required' => 'Informe seu nome' }
+        .field= email_field_tag :email, '', placeholder: 'e-mail', required: true, data: { 'msg-required' => 'Informe seu email' }
+        .field= text_field_tag :subject, '', placeholder: 'assunto', required: true, data: { 'msg-required' => 'Informe o assunto do seu contato' }
+        .field= text_area_tag :message, '', placeholder: 'mensagem', required: true, data: { 'msg-required' => 'Explique o motivo do seu contato' }, maxlength: 355
 
-      = submit_tag 'Enviar', class: 'btn-black'
+        = submit_tag 'Enviar', class: 'btn-black'
 
-  .phone
-    %h3= t('strings.phone')
-    %p (21) 98845-0674
-    %p brunarxavier@gmail.com
-  .phone
-    %h3= t('strings.meeting')
-    %p
-      Rua Doutor Augusto Fausto de Souza - Agronomica, Florianópolis - SC
-    %p Segunda à Sexta das 10h às 18h
+    .phone-and-meeting
+      .phone
+        %h3= t('strings.phone')
+        %p (21) 98845-0674
+        %p brunarxavier@gmail.com
+      .phone
+        %h3= t('strings.meeting')
+        %p
+          Rua Doutor Augusto Fausto de Souza - Agronomica, Florianópolis - SC
+        %p Segunda à Sexta das 10h às 18h
 
 = content_for :javascript do
   :javascript
