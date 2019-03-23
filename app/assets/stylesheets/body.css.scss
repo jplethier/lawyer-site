@@ -1,7 +1,16 @@
 article {
   height: auto;
-  margin: 0 auto;
-  width: 1024px;
+  width: 100%;
+  display: flex;
+
+  section {
+    width: 100%;
+    padding: 12px;
+
+    @media (min-width: $desktop-breakpoint) {
+      padding: 24px;
+    }
+  }
 
   h1 {
     color: $gray-dark;

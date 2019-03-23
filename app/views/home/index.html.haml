@@ -1,24 +1,25 @@
-.home
+%section.home
   .banner
     %img{ src: asset_path('familia.jpg'), alt: 'Familia' }
 
-  .news
-    %h3= t('strings.news')
-    %ul
-      - @reports.each do |report|
-        %li
-          = link_to (report.title + " <span>Leia mais...</span>").html_safe, report.url, target: '_blank'
+  .home-content
+    .news
+      %h3= t('strings.news')
+      %ul
+        - @reports.each do |report|
+          %li
+            = link_to (report.title + " <span>Leia mais...</span>").html_safe, report.url, target: '_blank'
 
-  .links
-    %h3= t('strings.helpful_links')
-    %ul
-      %li= link_to 'Tribunal de Justiça - SC', 'http://www.tjsc.jus.br', target: '_blank'
-      %li= link_to 'Superior Tribunal Federal', 'http://www.stf.jus.br', target: '_blank'
-      %li= link_to 'Receita Federal', 'http://www.receita.fazenda.gov.br', target: '_blank'
-      %li= link_to 'Ordem dos Advogados - SC', 'http://www.oab-sc.org.br/', target: '_blank'
-      %li= link_to 'PROCON - SC', 'http://www.procon.sc.gov.br/', target: '_blank'
-      %li= link_to 'Conselho Tutelar - Florianópolis', 'http://www.pmf.sc.gov.br/entidades/semas/index.php?cms=conselho+tutelar&menu=5&submenuid=219', target: '_blank'
-      %li= link_to 'Padrinho Nota 10', 'http://www.padrinhonota10.com.br/', target: '_blank'
+    .links
+      %h3= t('strings.helpful_links')
+      %ul
+        %li= link_to 'Tribunal de Justiça - SC', 'http://www.tjsc.jus.br', target: '_blank'
+        %li= link_to 'Superior Tribunal Federal', 'http://www.stf.jus.br', target: '_blank'
+        %li= link_to 'Receita Federal', 'http://www.receita.fazenda.gov.br', target: '_blank'
+        %li= link_to 'Ordem dos Advogados - SC', 'http://www.oab-sc.org.br/', target: '_blank'
+        %li= link_to 'PROCON - SC', 'http://www.procon.sc.gov.br/', target: '_blank'
+        %li= link_to 'Conselho Tutelar - Florianópolis', 'http://www.pmf.sc.gov.br/entidades/semas/index.php?cms=conselho+tutelar&menu=5&submenuid=219', target: '_blank'
+        %li= link_to 'Padrinho Nota 10', 'http://www.padrinhonota10.com.br/', target: '_blank'
 
   / .partners
   /   %h3= t('strings.partners')

@@ -3,22 +3,54 @@
 
   .banner {
     margin-bottom: 10px;
-    max-height: 332px;
-    width: 1024px;
+    width: 100%;
 
     img {
-      width: 1024px;
+      width: 100%;
     }
   }
 
-  .news, .links, .partners {
-  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $desktop-breakpoint) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .news {
+    width: 100%;
+
+    @media (min-width: $desktop-breakpoint) {
+      width: 72%;
+    }
+  }
+
+  .links {
+    width: 100%;
+    margin-top: 10px;
+
+    @media (min-width: $desktop-breakpoint) {
+      width: 24%;
+      margin-top: 0;
+    }
+  }
+
+  .news, .links {
     h3 {
       border-top: 5px solid;
       color: $gray-dark;
-      font-size: 26px;
-      margin: 0 0 10px;
-      padding: 10px 0;
+      font-size: 18px;
+      margin: 0 0 5px;
+      padding: 10px 0 5px;
+
+      @media (min-width: $desktop-breakpoint) {
+        font-size: 26px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
     }
 
     ul {
@@ -29,11 +61,19 @@
 
         a {
           color: $gray-dark;
-          font-size: 14px;
+          font-size: 12px;
 
           span {
             color: $orange;
-            font-size: 12px;
+            font-size: 10px;
+          }
+
+          @media (min-width: $desktop-breakpoint) {
+            font-size: 14px;
+
+            span {
+              font-size: 12px;
+            }
           }
         }
 
@@ -42,20 +82,5 @@
         }
       }
     }
-  }
-
-  .news {
-    float: left;
-    width: 73%;
-  }
-
-  .links, .partners {
-    float: right;
-    width: 25%;
-  }
-
-  .partners {
-    clear: right;
-    margin-top: 10px;
   }
 }
