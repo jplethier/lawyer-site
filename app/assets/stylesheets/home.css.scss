@@ -1,14 +1,18 @@
+.banner {
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+
+  img {
+    width: 100%;
+  }
+}
+
 .home {
   position: relative;
-
-  .banner {
-    margin-bottom: 10px;
-    width: 100%;
-
-    img {
-      width: 100%;
-    }
-  }
 
   .home-content {
     display: flex;

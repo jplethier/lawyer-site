@@ -1,7 +1,23 @@
-%section.home
-  .banner
-    %img{ src: asset_path('familia.jpg'), alt: 'Familia' }
+.banner.swiper-container
+  <!-- Additional required wrapper -->
+  .swiper-wrapper
+    <!-- Slides -->
+    .swiper-slide
+      %img{ src: asset_path('familia.jpg'), alt: 'Familia' }
+    .swiper-slide
+      %img{ src: asset_path('banner1.jpg'), alt: 'Direito' }
+  
+  <!-- If we need pagination -->
+  .swiper-pagination
 
+  <!-- If we need navigation buttons -->
+  .swiper-button-prev
+  .swiper-button-next
+
+  <!-- If we need scrollbar -->
+  .swiper-scrollbar
+
+%section.home
   .home-content
     .news
       %h3= t('strings.news')
